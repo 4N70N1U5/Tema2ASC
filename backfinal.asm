@@ -380,7 +380,9 @@ iesire_back:
     jne exit
 
     pushl impos
+    pushl $formatPrintf
     call printf
+    popl %ebx
     popl %ebx
 
 exit:
